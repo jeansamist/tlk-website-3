@@ -209,6 +209,18 @@
         --sans: "Inter", system-ui, sans-serif;
         --px: clamp(20px, 5vw, 64px);
       }
+      .container {
+        max-width: 1536px;
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: var(--px);
+      }
+      .nav > .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
       html {
         scroll-behavior: smooth;
       }
@@ -244,13 +256,9 @@
         top: 0;
         z-index: 200;
         height: 72px;
-        padding: 0 var(--px);
         background: rgba(255, 255, 255, 0.93);
         border-bottom: 1px solid var(--hair);
         backdrop-filter: blur(20px) saturate(160%);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
       }
       .logo {
         display: flex;
@@ -462,6 +470,8 @@
         text-align: left;
         overflow: visible;
         position: relative;
+        max-width: 1536px;
+        margin-inline: auto;
       }
       #page-home .hero-copy {
         padding: clamp(60px, 8vw, 120px) clamp(24px, 5vw, 80px)
@@ -2330,13 +2340,9 @@
         top: 3px;
         z-index: 200;
         height: 72px;
-        padding: 0 var(--px);
         background: rgba(251, 249, 246, 0.94);
         border-bottom: 1px solid var(--rule);
         backdrop-filter: blur(20px) saturate(160%);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
       }
       .logo {
         display: flex;
@@ -4058,13 +4064,9 @@
         top: 3px;
         z-index: 100;
         height: 72px;
-        padding: 0 var(--px);
         background: rgba(255, 255, 255, 0.94);
         border-bottom: 1px solid var(--rule);
         backdrop-filter: blur(20px) saturate(160%);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
       }
       .logo {
         display: flex;
@@ -5096,6 +5098,7 @@
      SHARED NAV (one nav for all pages)
 ═══════════════════════════════════ -->
     <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <div class="container">
       <div class="logo">
         <img src="images/logo-tlk.webp" width="200" alt="Logo" />
       </div>
@@ -5164,6 +5167,7 @@
       >
         <span></span><span></span><span></span>
       </button>
+      </div>
     </nav>
     <div class="nav-drawer" id="drawer">
       <a
